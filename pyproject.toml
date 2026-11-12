@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json-prune-nulls"
+version = "1.0.0"
+description = "Remove null-valued entries recursively from JSON objects and arrays."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+json-prune-nulls = "json_prune_nulls:main"
+
+[tool.setuptools]
+py-modules = ["json_prune_nulls"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
